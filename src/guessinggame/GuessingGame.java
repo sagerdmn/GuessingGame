@@ -12,6 +12,7 @@ public class GuessingGame {
      */
     public static void main(String[] args) {
         int answer = 4;
+        int count = 0;
         boolean go = true;
         
         Scanner input = new Scanner(System.in);
@@ -20,10 +21,12 @@ public class GuessingGame {
             int guess = input.nextInt();
         
             if(guess==answer){
-                System.out.println("Correct!");
+                count++;
+                System.out.println("Correct!" + "\nNumber of attempts:" + count);
             }
             else{
                 System.out.println("Incorrect!");
+                count++;
                 if(guess>answer){
                     System.out.println("Too high!");
                 }
