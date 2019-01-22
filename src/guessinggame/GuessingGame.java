@@ -24,6 +24,12 @@ public class GuessingGame {
             }
             else{
                 System.out.println("Incorrect!");
+                if(guess>answer){
+                    System.out.println("Too high!");
+                }
+                if(guess<answer){
+                    System.out.println("Too low!");
+                }
             }
         }
     }
